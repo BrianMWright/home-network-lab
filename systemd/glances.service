@@ -1,0 +1,11 @@
+[Unit]
+Description=Glances in Web Server Mode
+[Service]
+ExecStart=/opt/glances/bin/glances -w -p 61209
+Restart=always
+RestartSec=5
+User=labadmin
+WorkingDirectory=/home/labadmin
+Environment="PATH=/opt/glances/bin:/usr/bin:/bin"
+[Install]
+WantedBy=multi-user.target
